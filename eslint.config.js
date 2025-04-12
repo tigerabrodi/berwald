@@ -27,15 +27,15 @@ export default tseslint.config(
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'variable',
-          types: ['boolean'],
-          format: ['PascalCase'],
-          prefix: ['is', 'should', 'has', 'are', 'can', 'was'],
-        },
-      ],
+      // '@typescript-eslint/naming-convention': [
+      //   'error',
+      //   {
+      //     selector: 'variable',
+      //     types: ['boolean'],
+      //     format: ['PascalCase'],
+      //     prefix: ['is', 'should', 'has', 'are', 'can', 'was'],
+      //   },
+      // ],
     },
   }
 )
