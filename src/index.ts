@@ -1,4 +1,2 @@
-
-export function log() {
-  console.log("log")
-}
+// Core
+export * from './core/option'
