@@ -23,6 +23,10 @@ export default tseslint.config(
       '@typescript-eslint/array-type': ['error', { default: 'generic' }],
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/await-thenable': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
       '@typescript-eslint/naming-convention': [
         'error',
         {
