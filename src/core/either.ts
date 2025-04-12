@@ -1,5 +1,3 @@
-// src/core/either.ts
-
 /**
  * The Either type represents values with two possibilities: Left or Right.
  * By convention, Left is used for failure and Right is used for success.

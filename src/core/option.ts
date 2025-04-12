@@ -1,5 +1,3 @@
-// src/core/option.ts
-
 /**
  * The Option type represents an optional value: every Option is either Some with a value, or None.
  */
