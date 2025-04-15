@@ -15,8 +15,11 @@ import { none, Option, some } from '../core/option'
  * const error = parseJSON('invalid'); // Left('Invalid JSON: ...')
  */
 export const tryCatch =
-  <A, B, E>(f: (...args: Array<A>) => B, onError: (error: unknown) => E) =>
-  (...args: Array<A>): Either<E, B> => {
+  <A extends Array<unknown>, B, E>(
+    f: (...args: A) => B,
+    onError: (error: unknown) => E
+  ) =>
+  (...args: A): Either<E, B> => {
     try {
       return right(f(...args))
     } catch (error) {
@@ -35,8 +38,8 @@ export const tryCatch =
  * const error = parseJSON('invalid'); // None
  */
 export const tryCatchOption =
-  <A, B>(f: (...args: Array<A>) => B) =>
-  (...args: Array<A>): Option<B> => {
+  <A extends Array<unknown>, B>(f: (...args: A) => B) =>
+  (...args: A): Option<B> => {
     try {
       return some(f(...args))
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -58,11 +61,11 @@ export const tryCatchOption =
  * const user = await fetchUser(123); // Either<string, User>
  */
 export const tryCatchAsync =
-  <A, B, E>(
-    f: (...args: Array<A>) => Promise<B>,
+  <A extends Array<unknown>, B, E>(
+    f: (...args: A) => Promise<B>,
     onError: (error: unknown) => E
   ) =>
-  async (...args: Array<A>): Promise<Either<E, B>> => {
+  async (...args: A): Promise<Either<E, B>> => {
     try {
       const result = await f(...args)
       return right(result)
@@ -83,8 +86,8 @@ export const tryCatchAsync =
  * const user = await fetchUser(123); // Option<User>
  */
 export const tryCatchAsyncOption =
-  <A, B>(f: (...args: Array<A>) => Promise<B>) =>
-  async (...args: Array<A>): Promise<Option<B>> => {
+  <A extends Array<unknown>, B>(f: (...args: A) => Promise<B>) =>
+  async (...args: A): Promise<Option<B>> => {
     try {
       const result = await f(...args)
       return some(result)
