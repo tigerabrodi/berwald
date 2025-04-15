@@ -1,5 +1,3 @@
-// src/core/list.ts
-
 /**
  * A functional immutable List implementation
  */

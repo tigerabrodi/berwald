@@ -1,4 +1,3 @@
-// tests/curry.test.ts
 import {
   curry2,
   curry3,

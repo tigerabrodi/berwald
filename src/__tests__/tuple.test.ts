@@ -1,4 +1,3 @@
-// tests/tuple.test.ts
 import {
   bimap,
   first,

@@ -1,4 +1,3 @@
-// tests/group.test.ts
 import {
   Group,
   booleanXorGroup,

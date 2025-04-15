@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// tests/either.test.ts
 import { Equal, Expect } from 'type-testing'
 import {
   Either,

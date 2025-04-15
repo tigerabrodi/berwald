@@ -1,4 +1,3 @@
-// tests/semigroup.test.ts
 import {
   allSemigroup,
   anySemigroup,

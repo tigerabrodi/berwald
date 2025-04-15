@@ -1,4 +1,3 @@
-// tests/list.test.ts
 import {
   concat,
   cons,

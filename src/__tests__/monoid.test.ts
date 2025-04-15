@@ -1,4 +1,3 @@
-// tests/monoid.test.ts
 import {
   allMonoid,
   anyMonoid,
